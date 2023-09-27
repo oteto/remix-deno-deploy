@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:react"
+  },
+  "tasks": {
+    "build": "pnpm remix build",
+    "start": "deno run --allow-env --allow-net --allow-read=public/ --node-modules-dir=false build/index.js",
+    "dev": "NODE_ENV=development pnpm remix dev -c 'deno task dev:server'",
+    "dev:server": "NODE_ENV=development deno run --watch --no-clear-screen --unstable --allow-env --allow-net --allow-read=public/ --node-modules-dir=false build/index.js",
+    "deploy": "deno run -A deploy.ts",
+    "deploy:cmd": "deployctl deploy --project=remix-deno-oteto --include=.cache,build,public ./build/index.js"
+  }
+}

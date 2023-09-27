@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "deno.unstable": true,
+  "deno.lint": true,
+  "deno.enable": false,
+  "deno.enablePaths": [
+    "./deno.d.ts",
+    "./server.ts",
+    "./deploy.ts",
+    "./app/utils/kv.deno.ts"
+  ],
+}
